@@ -1,0 +1,42 @@
+{
+  "name": "ulyl-extension",
+  "version": "1.0.0",
+  "description": "\"Ulyl is a collection of automation tools.\"",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "prod": "webpack --config webpack.prod.js",
+    "watch": "webpack --config --color webpack.dev.js --watch --progress",
+    "dev": "webpack --config --color webpack.dev.js"
+  },
+  "author": "Amai team",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.9.1",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
+    "i18next": "^20.1.0",
+    "jquery": "^3.6.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.11.5",
+    "astring": "^1.6.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "uglify-es": "^3.3.9",
+    "uglify-js": "^3.12.4",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
