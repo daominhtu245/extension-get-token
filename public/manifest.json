@@ -1,31 +1,30 @@
 {
+  "manifest_version": 3,
   "author": "Amai Team",
   "name": "Get token",
+  "version": "1.0",
   "description": "Amai get cookies and token",
-  "short_name": "AFTT",
-  "version": "1.0.0",
-  "browser_action": {
+  "host_permissions": [
+    "https://*.facebook.com/"
+  ],
+  "permissions": [
+    "cookies"
+  ],
+  "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "favicon.png",
       "24": "favicon.png",
       "32": "favicon.png"
     },
-    "default_title": "Amai Get cookies",
-    "default_popup": "popup.html"
+    "default_title": "Amai Get cookies"
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
   },
   "icons": {
     "16": "favicon.png",
     "48": "favicon.png",
     "128": "favicon.png"
-  },
-  "background": {
-    "scripts": ["background.bundle.js"]
-  },
-  "permissions": [
-    "*://*.facebook.com/*",
-    "cookies",
-    "webRequest",
-    "webRequestBlocking"
-  ],
-  "manifest_version": 2
+  }
 }
