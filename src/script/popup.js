@@ -20,38 +20,6 @@ const $ = require("jquery");
     );
   };
 
-  const facebookOrigin = (request) => {
-    const requestHeaders = request["requestHeaders"];
-    const originIndex = requestHeaders["findIndex"](
-      (header) => "origin" === header.name
-    );
-    return (
-      -1 === originIndex
-        ? requestHeaders.push({
-            name: "origin",
-            value: "https://www.facebook.com",
-          })
-        : (requestHeaders[originIndex].value = "https://www.facebook.com"),
-      { requestHeaders: requestHeaders }
-    );
-  };
-
-  // chrome.webRequest.onBeforeSendHeaders.addListener(
-  //   facebookOrigin,
-  //   {
-  //     urls: [
-  //       "https://www.facebook.com/api/graphqlbatch/*",
-  //       "https://m.facebook.com/api/graphqlbatch/",
-  //       "https://www.facebook.com/api/graphql/",
-  //       "https://www.facebook.com/ajax/mercury/delete_thread.php",
-  //       "https://www.facebook.com/messaging/send/?dpr=1*",
-  //       "https://www.facebook.com/privacy/selector/update/*",
-  //       "https://www.facebook.com/ajax/profile/*",
-  //     ],
-  //   },
-  //   ["blocking", "requestHeaders", "extraHeaders"]
-  // );
-
   const baseUrl = "https://extensions.amaiteam.info";
 
   const getInfoUser = async (token) => {
